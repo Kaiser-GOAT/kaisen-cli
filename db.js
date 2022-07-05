@@ -1,5 +1,5 @@
 const path = require('path')
-const home = process.env.HOME || homedir
+const home = process.env.HOME || process.env.homedir
 const dbPath = path.join(home, '.todo')
 const fs = require('fs')
 

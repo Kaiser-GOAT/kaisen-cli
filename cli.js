@@ -1,7 +1,7 @@
 const { program } = require('commander')
 const api = require('./index')
 
-program.addOption(false)
+// program.addOption(false)
 
 program
   .command('add')
@@ -36,7 +36,7 @@ program
   .command('show')
   .description('show all task')
   .action(() => {
-    api.showAll()
+    api.show()
   })
 
 program
@@ -44,7 +44,11 @@ program
   .description('finish a task')
   .argument('<args...>')
   .action((task) => {
-    console.log(task)
     api.finish(task)
   })
-program.parse()
+
+if (process.argv.length === 2) {
+  process.argv.push('show')
+}
+
+program.parse(process.argv)
