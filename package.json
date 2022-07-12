@@ -1,14 +1,23 @@
 {
   "name": "kaisen-cli",
-  "bin":{
-    "t":"./cli.js"
+  "bin": {
+    "t": "./cli.js"
   },
-  "files": ["*.js"],
+  "files": [
+    "*.js"
+  ],
   "version": "1.0.6",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "commander": "^9.3.0",
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.2"
   }
 }
